@@ -159,7 +159,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.2264151, g: 0.2264151, b: 0.2264151, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -215,6 +215,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1447339247676848124, guid: 46cbe9326caf5476c8f5432b6b893c64, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1204268367}
+    - target: {fileID: 1447339247676848124, guid: 46cbe9326caf5476c8f5432b6b893c64, type: 3}
       propertyPath: m_Actions
       value: 
       objectReference: {fileID: -944628639613478452, guid: 1dadb573a8dd94a6c999926fc0f7f236, type: 3}
@@ -269,6 +273,22 @@ PrefabInstance:
     - target: {fileID: 1447339247676848127, guid: 46cbe9326caf5476c8f5432b6b893c64, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573543270013354495, guid: 46cbe9326caf5476c8f5432b6b893c64, type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573543270013354495, guid: 46cbe9326caf5476c8f5432b6b893c64, type: 3}
+      propertyPath: movementFilter.layerMask.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9195481553934532114, guid: 46cbe9326caf5476c8f5432b6b893c64, type: 3}
+      propertyPath: m_Size.y
+      value: 0.16726688
+      objectReference: {fileID: 0}
+    - target: {fileID: 9195481553934532114, guid: 46cbe9326caf5476c8f5432b6b893c64, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.41636658
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46cbe9326caf5476c8f5432b6b893c64, type: 3}
