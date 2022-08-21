@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class GunScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject bulletPrefab;
+    public Transform firePoint;
+    public float fireForce;
 
-    // Update is called once per frame
-    void Update()
+    public void Fire()
     {
-        
-    }
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
+    } 
 }
