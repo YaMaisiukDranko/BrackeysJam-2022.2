@@ -11,6 +11,9 @@ public class GunScript : MonoBehaviour
     public float fireDelay;
     public bool fireBool = false;
 
+    public float GunDamage;
+    
+
     private void Update()
     {
         if (Input.GetButtonDown("Fire1"))
