@@ -2,35 +2,27 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.LowLevel;
 
 public class PlayerController : MonoBehaviour
 {
-    public GunScript gunScript;
     public Rigidbody2D rb;
-    Vector2 mousePosition;
-    private Vector2 moveDiretion;
-
+    private Vector2 mousePos;
+    public Camera cam;
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        cam = GetComponentInChildren<Camera>();
     }
 
     private void Update()
     {
-       
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition); 
     }
 
     private void FixedUpdate()
     {
-        if (Mouse.current.leftButton.isPressed)
-        {
-            gunScript.Fire();
-        }
+        //rotate player by mouse position
         
-        Vector2 aimDirection = mousePosition - rb.position;
-        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
-        rb.rotation = aimAngle;
     }
 }

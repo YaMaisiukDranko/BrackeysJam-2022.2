@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,21 +10,22 @@ public class GunScript : MonoBehaviour
     public float fireForce;
     public float fireDelay;
 
-    public void Fire()
+    private void Update()
     {
-        FireDelay();
-        StartCoroutine(FireDelay());
+        Fire();
     }
 
-    public IEnumerator FireDelay()
+    public void Fire()
     {
-        Shoot();
-        yield return new WaitForSeconds(fireDelay);
+        if (Input.GetMouseButtonDown(0))
+        {
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
+        }
     }
 
     void Shoot()
     {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
+        
     }
 }
