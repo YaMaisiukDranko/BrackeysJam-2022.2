@@ -561,6 +561,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2573543270013354495, guid: 46cbe9326caf5476c8f5432b6b893c64, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1204268367}
+    - target: {fileID: 2573543270013354495, guid: 46cbe9326caf5476c8f5432b6b893c64, type: 3}
       propertyPath: moveSpeed
       value: 5
       objectReference: {fileID: 0}
@@ -572,6 +576,10 @@ PrefabInstance:
       propertyPath: rb
       value: 
       objectReference: {fileID: 82057602}
+    - target: {fileID: 7527120732999513199, guid: 46cbe9326caf5476c8f5432b6b893c64, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1204268367}
     - target: {fileID: 7527120732999513199, guid: 46cbe9326caf5476c8f5432b6b893c64, type: 3}
       propertyPath: gunScript
       value: 
