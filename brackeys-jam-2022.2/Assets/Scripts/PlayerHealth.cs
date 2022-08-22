@@ -15,10 +15,13 @@ public class PlayerHealth : MonoBehaviour
 
     private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            TakeDamage(20);
+        }
     }
 
-    void TakeDamagt(int damage)
+    void TakeDamage(int damage)
     {
         currentHealth -= damage;
     }
