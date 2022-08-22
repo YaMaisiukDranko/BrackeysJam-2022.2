@@ -17,7 +17,7 @@ public class GunScript : MonoBehaviour
 
     public void Fire()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetButton("Fire1"))
         {
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
