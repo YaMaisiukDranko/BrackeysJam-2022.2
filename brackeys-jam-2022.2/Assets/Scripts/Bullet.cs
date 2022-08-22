@@ -12,4 +12,9 @@ using UnityEngine;
         {
             Destroy(gameObject);
         }
+
+        private void Update()
+        {
+            Destroy(gameObject, 5f);
+        }
     }

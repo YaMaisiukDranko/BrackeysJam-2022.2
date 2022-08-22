@@ -17,15 +17,17 @@ public class GunScript : MonoBehaviour
 
     public void Fire()
     {
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
+            Invoke("Shoot", 1);
+            //StartCoroutine(GunFireDelay());
         }
     }
 
     void Shoot()
     {
-        
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
+        Debug.Log("Fire");
     }
 }
