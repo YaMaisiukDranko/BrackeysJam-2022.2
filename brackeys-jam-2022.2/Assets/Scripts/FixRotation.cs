@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class FixRotation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Quaternion rotation;
+
+    private void Awake()
     {
-        
+        rotation = transform.rotation;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void LateUpdate()
     {
-        
+        transform.rotation = rotation;
     }
 }

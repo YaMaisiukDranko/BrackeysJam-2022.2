@@ -766,6 +766,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4080884300406619706}
   - component: {fileID: 8688989339274786763}
+  - component: {fileID: 8688989339274786764}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -817,7 +818,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1.23}
+  m_AnchoredPosition: {x: 0, y: 1.8}
   m_SizeDelta: {x: 2.0642, y: 0.3392}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4009035555825297024
@@ -854,7 +855,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 2.8500001}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4944154471873480551
@@ -947,6 +948,7 @@ GameObject:
   - component: {fileID: 267275869945325767}
   - component: {fileID: 8328022771502267729}
   - component: {fileID: 8328022771502267730}
+  - component: {fileID: 8328022771502267731}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -1026,6 +1028,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 0}
+--- !u!114 &8328022771502267731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7928869675455572914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634c334dfd288499b85b70a02534cd92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!223 &8688989339274786763
 Canvas:
   m_ObjectHideFlags: 0
@@ -1047,6 +1061,18 @@ Canvas:
   m_SortingLayerID: 112600957
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &8688989339274786764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882133950957589716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634c334dfd288499b85b70a02534cd92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8829328248042850438
 PrefabInstance:
   m_ObjectHideFlags: 0
