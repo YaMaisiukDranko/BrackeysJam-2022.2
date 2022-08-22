@@ -7,6 +7,17 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     public Slider healthSlider;
+    private Quaternion rotation;
+
+    private void Awake()
+    {
+        rotation = transform.rotation;
+    }
+
+    private void LateUpdate()
+    {
+        transform.rotation = rotation;
+    }
 
     private void Start()
     {
