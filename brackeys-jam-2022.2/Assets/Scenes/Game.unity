@@ -235,6 +235,7 @@ MonoBehaviour:
   firePoint: {fileID: 1380240015}
   fireForce: 20
   fireDelay: 1
+  fireBool: 0
 --- !u!1 &1204268365
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,7 +344,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1380240014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.927, z: 0}
+  m_LocalPosition: {x: 0, y: 0.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -459,4 +460,5 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1447339247676848124, guid: 46cbe9326caf5476c8f5432b6b893c64, type: 3}
+    - {fileID: 7527120732999513199, guid: 46cbe9326caf5476c8f5432b6b893c64, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 46cbe9326caf5476c8f5432b6b893c64, type: 3}

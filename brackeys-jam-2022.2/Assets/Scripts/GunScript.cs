@@ -9,25 +9,19 @@ public class GunScript : MonoBehaviour
     public Transform firePoint;
     public float fireForce;
     public float fireDelay;
+    public bool fireBool = false;
 
     private void Update()
     {
-        Fire();
-    }
-
-    public void Fire()
-    {
         if (Input.GetButtonDown("Fire1"))
         {
-            Invoke("Shoot", 1);
-            //StartCoroutine(GunFireDelay());
+            fireBool = true;
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
         }
-    }
-
-    void Shoot()
-    {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
-        Debug.Log("Fire");
+        else
+        {
+            fireBool = false;
+        }
     }
 }
