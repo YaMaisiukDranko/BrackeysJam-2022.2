@@ -181,7 +181,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 11.178318, y: 2.0032835}
+  m_Offset: {x: 19.303642, y: 1.4310789}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -192,7 +192,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4006538, y: 11.336938}
+  m_Size: {x: 0.8665924, y: 21.178888}
   m_EdgeRadius: 0
 --- !u!61 &121728478
 BoxCollider2D:
@@ -207,7 +207,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -9.054837, y: 1.8229876}
+  m_Offset: {x: -16.798693, y: 1.3270755}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -218,7 +218,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7596073, y: 10.896217}
+  m_Size: {x: 0.98848724, y: 21.348515}
   m_EdgeRadius: 0
 --- !u!61 &121728479
 BoxCollider2D:
@@ -233,7 +233,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.88144493, y: 7.372081}
+  m_Offset: {x: 1.3010664, y: 11.758995}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -244,7 +244,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 21.03283, y: 0.4390812}
+  m_Size: {x: 36.825714, y: 0.8205528}
   m_EdgeRadius: 0
 --- !u!61 &121728480
 BoxCollider2D:
@@ -259,7 +259,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.1018062, y: -3.565843}
+  m_Offset: {x: 1.2162485, y: -8.601257}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -270,7 +270,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 21.153027, y: 0.5993433}
+  m_Size: {x: 36.945908, y: 1.5148735}
   m_EdgeRadius: 0
 --- !u!1 &777570574
 GameObject:
@@ -373,6 +373,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 556123117604862933, guid: 84ce7f83005b74a9ea5431579647d26e, type: 3}
   firePoint: {fileID: 1380240015}
   fireForce: 20
+  fireDelay: 1
 --- !u!1 &1204268365
 GameObject:
   m_ObjectHideFlags: 0
