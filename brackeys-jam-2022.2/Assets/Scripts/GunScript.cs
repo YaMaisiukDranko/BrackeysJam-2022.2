@@ -11,7 +11,7 @@ public class GunScript : MonoBehaviour
     public float fireDelay;
     public bool fireBool = false;
 
-    public float GunDamage;
+    public int GunDamage;
     
 
     private void Update()
