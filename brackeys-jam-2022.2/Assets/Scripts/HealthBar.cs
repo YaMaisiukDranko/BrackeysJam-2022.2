@@ -8,11 +8,15 @@ public class HealthBar : MonoBehaviour
 {
     public Slider healthSlider;
     public Image[] image;
+    public int imagesLenght;
 
     private void Start()
     {
-        
+        //Disabling healthbars (dirty code)
+        image[0].enabled = false;
+        image[1].enabled = false;
         image[2].enabled = false;
+        
         healthSlider = GetComponent<Slider>();
     }
 
@@ -34,9 +38,15 @@ public class HealthBar : MonoBehaviour
 
     public IEnumerator HealthBarShow()
     {
-        yield return new WaitForSeconds(1);
+        //Enabling/Disabling healthbars (dirty code)
+        image[0].enabled = true;
+        image[1].enabled = true;
         image[2].enabled = true;
         yield return new WaitForSeconds(1);
+        image[0].enabled = false;
+        image[1].enabled = false;
         image[2].enabled = false;
     }
+    
+    
 }

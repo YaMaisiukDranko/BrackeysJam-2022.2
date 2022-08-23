@@ -369,6 +369,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 5716055305244307150}
+  image:
+  - {fileID: 4572591136401308504}
+  - {fileID: 8673296100330755320}
+  - {fileID: 4377664407626801545}
+  imagesLenght: 0
 --- !u!114 &5716055305244307148
 MonoBehaviour:
   m_ObjectHideFlags: 0
