@@ -7,9 +7,12 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     public Slider healthSlider;
+    public Image[] image;
 
     private void Start()
     {
+        
+        image[2].enabled = false;
         healthSlider = GetComponent<Slider>();
     }
 
@@ -22,5 +25,18 @@ public class HealthBar : MonoBehaviour
     public void SetHealth(int health)
     {
         healthSlider.value = health;
+    }
+
+    public void HealthBarShower()
+    {
+        StartCoroutine(HealthBarShow());
+    }
+
+    public IEnumerator HealthBarShow()
+    {
+        yield return new WaitForSeconds(1);
+        image[2].enabled = true;
+        yield return new WaitForSeconds(1);
+        image[2].enabled = false;
     }
 }

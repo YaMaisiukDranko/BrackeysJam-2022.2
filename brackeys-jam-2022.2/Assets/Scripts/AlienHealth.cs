@@ -15,6 +15,8 @@ public class AlienHealth : MonoBehaviour
         if (collision.collider.CompareTag("Bullet"))
         {
             TakeDamage(20);
+            healthBar.HealthBarShow();
+            Debug.Log("Show HealthBar");
         }
     }
 
