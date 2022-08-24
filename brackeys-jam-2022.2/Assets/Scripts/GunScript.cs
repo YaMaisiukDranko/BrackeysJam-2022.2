@@ -7,26 +7,27 @@ public class GunScript : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform firePoint;
-    public float fireForce;
     public GunTypes gunTypes;
-    
-    
+    public GunScript gun;
+
+    private void Start()
+    {
+        gun = GetComponent<GunScript>();
+    }
+
     private void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
-            //StartCoroutine(GunFire());
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation, gun.transform);
+            bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * gunTypes.fireForce, ForceMode2D.Impulse);
         }
     }
 
-   /* IEnumerator GunFire()
+    private void FixedUpdate()
     {
-        //yield return new WaitForSeconds(1f);
         
-        //yield return new WaitForSeconds(0.5f);
-    }*/
+    }
 }
 
 

@@ -9,12 +9,13 @@ public class AlienHealth : MonoBehaviour
     public GunScript _gunScript;
     public HealthBar healthBar;
     public int maxHealth;
+    public GunTypes gunType;
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Bullet"))
         {
-            TakeDamage(20);
+            TakeDamage(gunType.damage);
             healthBar.HealthBarShower();
             Debug.Log("Show HealthBar");
         }
@@ -27,8 +28,8 @@ public class AlienHealth : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
-    
+
+
     private void Start()
     {
         alienHealth = maxHealth;

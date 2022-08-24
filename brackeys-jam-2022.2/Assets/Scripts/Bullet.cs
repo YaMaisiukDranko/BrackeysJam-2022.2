@@ -3,6 +3,15 @@ using UnityEngine;
 
     public class Bullet : MonoBehaviour
     {
+        public GunTypes gunType;
+        public GunScript gs;
+
+        private void Start()
+        {
+            gs = GetComponentInParent<GunScript>();
+            gunType = gs.GetComponent<GunTypes>();
+        }
+
         private void OnCollisionEnter2D(Collision2D col)
         {
             Destroy(gameObject);
