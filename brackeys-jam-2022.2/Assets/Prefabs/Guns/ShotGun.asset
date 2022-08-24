@@ -18,6 +18,6 @@ MonoBehaviour:
   fireForce: 20
   rapidFire: 0
   fireRate: 0
-  shotgun: 0
-  amountOfBullets: 10
-  spread: 10
+  shotgun: 1
+  amountOfBullets: 2
+  spread: 1

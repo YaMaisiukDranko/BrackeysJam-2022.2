@@ -71,13 +71,11 @@ public class GunScript : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
+           
             for (int i = 0; i < gunTypes.amountOfBullets; i++)
             {
-                GameObject b = Instantiate(bulletPrefab, transform.position, transform.rotation);
-                Rigidbody2D rb = b.GetComponent<Rigidbody2D>();
-                Vector2 dir = transform.rotation * Vector2.up;
-                Vector2 pdir = Vector2.Perpendicular(dir) * Random.Range(-gunTypes.spread, gunTypes.spread);
-                rb.velocity = (dir + pdir) * gunTypes.fireForce;
+                GameObject b = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                
             }
         }
     }
