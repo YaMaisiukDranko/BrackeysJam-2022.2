@@ -10,6 +10,9 @@ public class GunScript : MonoBehaviour
     public GunTypes gunTypes;
     public GunScript gun;
 
+    private float time;
+    public float fireRate;
+    
     private void Start()
     {
         gun = GetComponent<GunScript>();
@@ -17,17 +20,26 @@ public class GunScript : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButton("Fire1"))
         {
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation, gun.transform);
-            bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * gunTypes.fireForce, ForceMode2D.Impulse);
+            time += Time.deltaTime;
+            float nextTimeToFire = 1 / fireRate;
+
+            if (time >= nextTimeToFire)
+            {
+                Fire();
+                time = 0;
+            }
         }
     }
 
-    private void FixedUpdate()
+    void Fire()
     {
-        
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation, gun.transform);
+        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * gunTypes.fireForce, ForceMode2D.Impulse);
     }
+    
+    
 }
 
 
