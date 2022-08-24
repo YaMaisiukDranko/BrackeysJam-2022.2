@@ -10,5 +10,7 @@ public class GunTypes : ScriptableObject
     public Sprite GunSprite;
     public int damage;
     public int fireForce;
+    
     public bool rapidFire;
+    public bool shotgun;
 }

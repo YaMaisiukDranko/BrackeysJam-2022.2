@@ -30,6 +30,22 @@ public class GunScript : MonoBehaviour
         }
     }
 
+    void Fire()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation, gun.transform);
+        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * gunTypes.fireForce, ForceMode2D.Impulse);
+    }
+    
+    
+    //--------Gun types---------
+    void PistolFire()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Fire();
+        }
+    }
+    
     void RapidFire() //Rapid Fire mod
     {
         if (Input.GetButton("Fire1"))
@@ -45,22 +61,10 @@ public class GunScript : MonoBehaviour
         }
     }
 
-    void PistolFire()
+    void Shotgun()
     {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            Fire();
-        }
+        
     }
-
-
-
-    void Fire()
-    {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation, gun.transform);
-        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * gunTypes.fireForce, ForceMode2D.Impulse);
-    }
-    
     
 }
 
