@@ -10,6 +10,7 @@ public class AlienSpawner : MonoBehaviour
     public GameObject alien;
     public float spawnTime;
     public float time;
+    public int alienAmount;
 
     private void Start()
     {
@@ -24,15 +25,17 @@ public class AlienSpawner : MonoBehaviour
     private void Update()
     {
         time -= Time.deltaTime;
-        if (time <= 0)
-        {
-            SpawnAlien();
-            RestartTime();
-        }
-        else
-        {
-            
-        }
+        
+            for (int i = 0; i < alienAmount; i++)
+            {
+                if (time <= 0)
+                {
+                    SpawnAlien();
+                    RestartTime();
+                    Debug.Log(i);
+                }
+            }
+        
     }
 
     void SpawnAlien()
