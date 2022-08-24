@@ -6,7 +6,7 @@ using UnityEngine;
 public class GunTypes : ScriptableObject
 {
     public new string name;
-    public float shootingSpeed; //delay between shoots
+    public float fireRate; //Bullets per second
     public Sprite GunSprite;
     public int damage;
     public int fireForce;

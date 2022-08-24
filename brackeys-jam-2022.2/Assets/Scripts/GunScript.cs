@@ -20,6 +20,18 @@ public class GunScript : MonoBehaviour
 
     private void Update()
     {
+        if (gunTypes.rapidFire == true)
+        {
+            RapidFire();
+        }
+        else if (gunTypes.rapidFire == false)
+        {
+            PistolFire();
+        }
+    }
+
+    void RapidFire() //Rapid Fire mod
+    {
         if (Input.GetButton("Fire1"))
         {
             time += Time.deltaTime;
@@ -32,6 +44,16 @@ public class GunScript : MonoBehaviour
             }
         }
     }
+
+    void PistolFire()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Fire();
+        }
+    }
+
+
 
     void Fire()
     {
