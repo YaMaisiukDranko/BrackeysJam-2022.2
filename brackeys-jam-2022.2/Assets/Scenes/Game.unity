@@ -730,8 +730,9 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 1603172169}
   - {fileID: 468561547}
-  alien: {fileID: 2104853557}
-  spawnTime: 0
+  alien: {fileID: 8829328249406320166, guid: f8f2350b87ec441fc8e40f73552aa5db, type: 3}
+  spawnTime: 3
+  time: 3
 --- !u!4 &798141191
 Transform:
   m_ObjectHideFlags: 0
@@ -1272,11 +1273,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2104853557 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8829328249406320166, guid: f8f2350b87ec441fc8e40f73552aa5db, type: 3}
-  m_PrefabInstance: {fileID: 8829328248042850438}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &4009035555825297024
 MonoBehaviour:
   m_ObjectHideFlags: 0

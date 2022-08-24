@@ -9,10 +9,30 @@ public class AlienSpawner : MonoBehaviour
     public Transform[] spawnPoints;
     public GameObject alien;
     public float spawnTime;
+    public float time;
 
+    private void Start()
+    {
+        RestartTime();
+    }
+
+    void RestartTime()
+    {
+        time = spawnTime;
+    }
+    
     private void Update()
     {
-        SpawnAlien();
+        time -= Time.deltaTime;
+        if (time <= 0)
+        {
+            SpawnAlien();
+            RestartTime();
+        }
+        else
+        {
+            
+        }
     }
 
     void SpawnAlien()
