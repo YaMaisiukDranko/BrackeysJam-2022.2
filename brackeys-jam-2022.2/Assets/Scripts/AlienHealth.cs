@@ -6,9 +6,10 @@ using UnityEngine;
 public class AlienHealth : MonoBehaviour
 {
     public int alienHealth = 100;
-    public GunScript _gunScript;
+    public GameObject player;
     public HealthBar healthBar;
     public int maxHealth;
+    public GunScript gunScript;
     public GunTypes gunType;
     
     private void OnCollisionEnter2D(Collision2D collision)
@@ -21,8 +22,11 @@ public class AlienHealth : MonoBehaviour
         }
     }
 
+
     private void Update()
     {
+        gunScript = GameObject.FindWithTag("Gun").GetComponent<GunScript>();
+        gunType = gunScript.gunTypes;
         if (alienHealth <= 0)
         {
             Destroy(gameObject);
@@ -36,6 +40,7 @@ public class AlienHealth : MonoBehaviour
         healthBar.SetHealth(maxHealth);
 
         healthBar = GetComponentInChildren<HealthBar>();
+        player = GameObject.FindWithTag("Player");
     }
 
     void TakeDamage(int damage)

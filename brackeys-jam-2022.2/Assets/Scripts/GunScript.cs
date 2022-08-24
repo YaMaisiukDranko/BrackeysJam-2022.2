@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GunScript : MonoBehaviour
 {
@@ -11,31 +12,52 @@ public class GunScript : MonoBehaviour
     public GunScript gun;
 
     private float time;
-    public float fireRate;
+    
     
     private void Start()
     {
         gun = GetComponent<GunScript>();
+        Debug.Log("Weapon: " + gunTypes.name);
     }
 
     private void Update()
     {
-        if (gunTypes.rapidFire == true)
+        if (gunTypes.rapidFire == true && gunTypes.shotgun == false)
         {
             RapidFire();
         }
-        else if (gunTypes.rapidFire == false)
+        else if (gunTypes.rapidFire == false && gunTypes.shotgun == false)
         {
             PistolFire();
         }
+        else if (gunTypes.shotgun == true && gunTypes.rapidFire == false)
+        {
+            Shotgun();
+        }
     }
 
+    void Fire()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation, gun.transform);
+        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * gunTypes.fireForce, ForceMode2D.Impulse);
+    }
+    
+    
+    //--------Gun types---------
+    void PistolFire()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Fire();
+        }
+    }
+    
     void RapidFire() //Rapid Fire mod
     {
         if (Input.GetButton("Fire1"))
         {
             time += Time.deltaTime;
-            float nextTimeToFire = 1 / fireRate;
+            float nextTimeToFire = 1 / gunTypes.fireRate;
 
             if (time >= nextTimeToFire)
             {
@@ -45,22 +67,18 @@ public class GunScript : MonoBehaviour
         }
     }
 
-    void PistolFire()
+    void Shotgun()
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Fire();
+           
+            for (int i = 0; i < gunTypes.amountOfBullets; i++)
+            {
+                GameObject b = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                
+            }
         }
     }
-
-
-
-    void Fire()
-    {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation, gun.transform);
-        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * gunTypes.fireForce, ForceMode2D.Impulse);
-    }
-    
     
 }
 

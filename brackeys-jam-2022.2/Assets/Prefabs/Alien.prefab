@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8829328249406320165}
   - component: {fileID: 8829328249406320162}
   - component: {fileID: 735485547358462146}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Alien
-  m_TagString: Untagged
+  m_TagString: Alien
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,9 +127,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alienHealth: 100
-  _gunScript: {fileID: 0}
+  player: {fileID: 0}
   healthBar: {fileID: 3818181439744943562}
   maxHealth: 100
+  gunScript: {fileID: 0}
+  gunType: {fileID: 0}
 --- !u!114 &735485547358462146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,9 +237,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2573507087784574673, guid: 29e15175425e64e50b83f9cf4198ad7b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3530099394624931659, guid: 29e15175425e64e50b83f9cf4198ad7b, type: 3}
       propertyPath: m_Name
       value: HealthBarCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3530099394624931659, guid: 29e15175425e64e50b83f9cf4198ad7b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4377664407626801546, guid: 29e15175425e64e50b83f9cf4198ad7b, type: 3}
       propertyPath: m_AnchorMax.x
@@ -246,6 +256,14 @@ PrefabInstance:
     - target: {fileID: 4377664407626801546, guid: 29e15175425e64e50b83f9cf4198ad7b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377664407626801547, guid: 29e15175425e64e50b83f9cf4198ad7b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965464522011850797, guid: 29e15175425e64e50b83f9cf4198ad7b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29e15175425e64e50b83f9cf4198ad7b, type: 3}
