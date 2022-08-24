@@ -25,17 +25,19 @@ public class AlienSpawner : MonoBehaviour
     private void Update()
     {
         time -= Time.deltaTime;
-        
-            for (int i = 0; i < alienAmount; i++)
+
+        for (int i = 0; i < alienAmount; i++)
+        {
+            if (time <= 0)
             {
-                if (time <= 0)
-                {
-                    SpawnAlien();
-                    RestartTime();
-                    Debug.Log(i);
-                }
+                SpawnAlien();
+                i++;
+                //RestartTime();
+                //Debug.Log(i);
+
             }
-        
+        }
+
     }
 
     void SpawnAlien()
@@ -43,6 +45,7 @@ public class AlienSpawner : MonoBehaviour
         int randPoint = Random.Range(0, spawnPoints.Length);
 
         Instantiate(alien, spawnPoints[randPoint].position, transform.rotation);
+        RestartTime();
     }
 }
 
