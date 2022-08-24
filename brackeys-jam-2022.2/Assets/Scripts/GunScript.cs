@@ -7,24 +7,61 @@ public class GunScript : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform firePoint;
-    public float fireForce;
-    public float fireDelay;
-    public bool fireBool = false;
+    public GunTypes gunTypes;
+    public GunScript gun;
 
-    public int GunDamage;
+    private float time;
+    public float fireRate;
     
+    private void Start()
+    {
+        gun = GetComponent<GunScript>();
+    }
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (gunTypes.rapidFire == true)
         {
-            fireBool = true;
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
+            RapidFire();
         }
-        else
+        else if (gunTypes.rapidFire == false)
         {
-            fireBool = false;
+            PistolFire();
         }
     }
+
+    void RapidFire() //Rapid Fire mod
+    {
+        if (Input.GetButton("Fire1"))
+        {
+            time += Time.deltaTime;
+            float nextTimeToFire = 1 / fireRate;
+
+            if (time >= nextTimeToFire)
+            {
+                Fire();
+                time = 0;
+            }
+        }
+    }
+
+    void PistolFire()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Fire();
+        }
+    }
+
+
+
+    void Fire()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation, gun.transform);
+        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * gunTypes.fireForce, ForceMode2D.Impulse);
+    }
+    
+    
 }
+
+

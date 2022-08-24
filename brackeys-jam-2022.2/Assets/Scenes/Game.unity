@@ -375,10 +375,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 556123117604862933, guid: 84ce7f83005b74a9ea5431579647d26e, type: 3}
   firePoint: {fileID: 1380240015}
-  fireForce: 20
-  fireDelay: 1
-  fireBool: 0
-  GunDamage: 0
+  gunTypes: {fileID: 11400000, guid: 3f751b06144ba4830ac10bbc50314c62, type: 2}
+  gun: {fileID: 777570577}
+  fireRate: 5
 --- !u!1001 &1124419910
 PrefabInstance:
   m_ObjectHideFlags: 0
