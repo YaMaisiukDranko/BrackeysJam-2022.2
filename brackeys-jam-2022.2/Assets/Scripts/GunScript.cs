@@ -10,14 +10,17 @@ public class GunScript : MonoBehaviour
     public Transform firePoint;
     public GunTypes gunTypes;
     public GunScript gun;
+    public SpriteRenderer sr;
 
     private float time;
     
     
     private void Start()
     {
+        sr = GetComponent<SpriteRenderer>();
         gun = GetComponent<GunScript>();
         Debug.Log("Weapon: " + gunTypes.name);
+        sr.sprite = gunTypes.GunSprite; // Set sprite
     }
 
     private void Update()
