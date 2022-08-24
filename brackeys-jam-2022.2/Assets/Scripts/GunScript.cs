@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GunScript : MonoBehaviour
 {
@@ -11,22 +12,27 @@ public class GunScript : MonoBehaviour
     public GunScript gun;
 
     private float time;
-    public float fireRate;
+    
     
     private void Start()
     {
         gun = GetComponent<GunScript>();
+        Debug.Log("Weapon: " + gunTypes.name);
     }
 
     private void Update()
     {
-        if (gunTypes.rapidFire == true)
+        if (gunTypes.rapidFire == true && gunTypes.shotgun == false)
         {
             RapidFire();
         }
-        else if (gunTypes.rapidFire == false)
+        else if (gunTypes.rapidFire == false && gunTypes.shotgun == false)
         {
             PistolFire();
+        }
+        else if (gunTypes.shotgun == true && gunTypes.rapidFire == false)
+        {
+            Shotgun();
         }
     }
 
@@ -51,7 +57,7 @@ public class GunScript : MonoBehaviour
         if (Input.GetButton("Fire1"))
         {
             time += Time.deltaTime;
-            float nextTimeToFire = 1 / fireRate;
+            float nextTimeToFire = 1 / gunTypes.fireRate;
 
             if (time >= nextTimeToFire)
             {
@@ -63,7 +69,17 @@ public class GunScript : MonoBehaviour
 
     void Shotgun()
     {
-        
+        if (Input.GetButtonDown("Fire1"))
+        {
+            for (int i = 0; i < gunTypes.amountOfBullets; i++)
+            {
+                GameObject b = Instantiate(bulletPrefab, transform.position, transform.rotation);
+                Rigidbody2D rb = b.GetComponent<Rigidbody2D>();
+                Vector2 dir = transform.rotation * Vector2.up;
+                Vector2 pdir = Vector2.Perpendicular(dir) * Random.Range(-gunTypes.spread, gunTypes.spread);
+                rb.velocity = (dir + pdir) * gunTypes.fireForce;
+            }
+        }
     }
     
 }

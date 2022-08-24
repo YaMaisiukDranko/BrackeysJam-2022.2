@@ -18,4 +18,5 @@ public class GunTypes : ScriptableObject
     [Header("Shotgun")]
     public bool shotgun;
     public int amountOfBullets;
+    public float spread;
 }

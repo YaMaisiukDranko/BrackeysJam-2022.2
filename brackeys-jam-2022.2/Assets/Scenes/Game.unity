@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 777570577}
   m_Layer: 0
   m_Name: Gun
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -375,9 +375,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 556123117604862933, guid: 84ce7f83005b74a9ea5431579647d26e, type: 3}
   firePoint: {fileID: 1380240015}
-  gunTypes: {fileID: 11400000, guid: 3f751b06144ba4830ac10bbc50314c62, type: 2}
+  gunTypes: {fileID: 11400000, guid: 37e383bc8ed1344eaa92c35ba6b8a4dc, type: 2}
   gun: {fileID: 777570577}
-  fireRate: 5
 --- !u!1001 &1124419910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -570,7 +569,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1380240014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.55, z: 0}
+  m_LocalPosition: {x: 0, y: 0.907, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -604,7 +603,7 @@ GameObject:
   - component: {fileID: 7748745112459565422}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

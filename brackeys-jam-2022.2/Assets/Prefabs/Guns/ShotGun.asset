@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376cebc2abf984a1c8199e72a3d6a533, type: 3}
   m_Name: ShotGun
   m_EditorClassIdentifier: 
-  name: 
-  fireRate: 0
+  name: Shotgun
   GunSprite: {fileID: 0}
-  damage: 0
-  fireForce: 0
+  damage: 5
+  fireForce: 20
   rapidFire: 0
+  fireRate: 0
+  shotgun: 0
+  amountOfBullets: 10
+  spread: 10

@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: Pistol
   m_EditorClassIdentifier: 
   name: Pistol
-  shootingSpeed: 5
   GunSprite: {fileID: 0}
   damage: 10
   fireForce: 20
   rapidFire: 0
+  fireRate: 0
+  shotgun: 0
+  amountOfBullets: 0
+  spread: 0
