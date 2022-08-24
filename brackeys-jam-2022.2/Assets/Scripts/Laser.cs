@@ -9,7 +9,8 @@ public class Laser : MonoBehaviour
     public Transform laserFirePoint;
     public LineRenderer m_lineRenderer;
     private Transform _transform;
-
+    private RaycastHit2D hit;
+    public LayerMask lm;
     private void Awake()
     {
         _transform = GetComponent<Transform>();
@@ -18,14 +19,15 @@ public class Laser : MonoBehaviour
     private void Update()
     {
         ShootLaser();
+        CheckForEnemy();
     }
 
     void ShootLaser()
     {
         if (Physics2D.Raycast(_transform.position, transform.right))
         {
-            RaycastHit2D _hit = Physics2D.Raycast(laserFirePoint.position, transform.right);
-            Draw2DRay(laserFirePoint.position, _hit.point);
+            hit = Physics2D.Raycast(laserFirePoint.position, transform.right, defDistanceRay, lm);
+            Draw2DRay(laserFirePoint.position, hit.point);
         }
         else
         {
@@ -37,5 +39,17 @@ public class Laser : MonoBehaviour
     {
         m_lineRenderer.SetPosition(0, startPos);
         m_lineRenderer.SetPosition(1, endPos);
+    }
+
+    void CheckForEnemy()
+    {
+        if (hit)
+        {
+            Debug.Log("Touch - ALIEN");
+        }
+        else
+        {
+            
+        }
     }
 }
