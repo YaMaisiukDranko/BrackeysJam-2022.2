@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
@@ -20,16 +21,17 @@ public class PlayerHealth : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (currentHealth <= 0)
         {
-            TakeDamage(20);
+            Destroy(gameObject);//Destroy player
         }
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
+        Debug.Log("Get Damage");
+        healthBar.HealthBarShower();
         currentHealth -= damage;
-        
         healthBar.SetHealth(currentHealth);
     }
 }

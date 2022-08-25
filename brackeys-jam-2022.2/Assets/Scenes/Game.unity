@@ -709,7 +709,7 @@ GameObject:
   - component: {fileID: 798141191}
   - component: {fileID: 798141190}
   m_Layer: 0
-  m_Name: Manager
+  m_Name: AlienSpawnerManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1422,7 +1422,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5716055305244307148, guid: 29e15175425e64e50b83f9cf4198ad7b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 29e15175425e64e50b83f9cf4198ad7b, type: 3}
 --- !u!50 &7613314539612146934
 Rigidbody2D:
@@ -1598,6 +1599,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8829328249406320164, guid: f8f2350b87ec441fc8e40f73552aa5db, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829328249406320165, guid: f8f2350b87ec441fc8e40f73552aa5db, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8829328249406320166, guid: f8f2350b87ec441fc8e40f73552aa5db, type: 3}
