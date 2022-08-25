@@ -18,6 +18,8 @@ public class TakeWeapon : MonoBehaviour
             Debug.Log("Equip weapon");
             
             CurrentGunTypes = GameObject.FindWithTag("Gun").GetComponent<GunScript>().gunTypes;
+            CurrentGunTypes = TakeWeaponGunTypes;
+            gs.gunTypes = CurrentGunTypes;
         }
         
         if (other.gameObject.CompareTag("Player"))
