@@ -37,6 +37,7 @@ public class GunScript : MonoBehaviour
         {
             Shotgun();
         }
+        sr.sprite = gunTypes.GunSprite;
     }
 
     void Fire()
