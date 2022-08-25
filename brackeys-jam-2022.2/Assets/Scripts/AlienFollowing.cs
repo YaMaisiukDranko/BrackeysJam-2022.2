@@ -10,6 +10,7 @@ public class AlienFollowing : MonoBehaviour
 
     private void Start()
     {
+        target = GameObject.FindWithTag("Player").transform;
     }
 
     private void Update()
