@@ -10,7 +10,14 @@ public class TakeWeapon : MonoBehaviour
     public GunTypes CurrentGunTypes;
     public bool aroundWeapon;
     public GunScript gs;
-    
+    public SpriteRenderer sr;
+
+    private void Start()
+    {
+        sr = GetComponent<SpriteRenderer>();
+        sr.sprite = TakeWeaponGunTypes.GunSprite;
+    }
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
