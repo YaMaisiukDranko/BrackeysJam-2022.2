@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -42,8 +43,17 @@ public class GunScript : MonoBehaviour
 
     void Fire()
     {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation, gun.transform);
-        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * gunTypes.fireForce, ForceMode2D.Impulse);
+        if (gunTypes.shotgun == true)
+        {
+            
+        }
+
+        else if (gunTypes.shotgun == false)
+        {
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation, gun.transform);
+            bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * gunTypes.fireForce, ForceMode2D.Impulse);
+        }
+        
     }
     
     
@@ -75,12 +85,7 @@ public class GunScript : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-           
-            for (int i = 0; i < gunTypes.amountOfBullets; i++)
-            {
-                GameObject b = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
                 
-            }
         }
     }
     

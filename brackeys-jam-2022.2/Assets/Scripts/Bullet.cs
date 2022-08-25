@@ -11,12 +11,18 @@ using UnityEngine;
 
         private void OnCollisionEnter2D(Collision2D col)
         {
-            Destroy(gameObject);
+            if (!col.gameObject.CompareTag("Bullet"))
+            {
+                Destroy(gameObject);
+            }
         }
 
         private void OnTriggerEnter2D(Collider2D col)
         {
-            Destroy(gameObject);
+            if (!col.gameObject.CompareTag("Bullet"))
+            {
+                Destroy(gameObject);
+            }
         }
 
         private void Update()

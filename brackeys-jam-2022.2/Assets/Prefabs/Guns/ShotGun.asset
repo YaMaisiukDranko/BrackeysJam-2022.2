@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ShotGun
   m_EditorClassIdentifier: 
   name: Shotgun
-  GunSprite: {fileID: 0}
+  GunSprite: {fileID: 134307591, guid: 407191f0247f248b4ae99f4effaed872, type: 3}
   damage: 5
   fireForce: 20
   rapidFire: 0
