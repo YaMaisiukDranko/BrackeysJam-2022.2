@@ -1262,6 +1262,10 @@ PrefabInstance:
       value: Gun1_1
       objectReference: {fileID: 0}
     - target: {fileID: 4110962879232718936, guid: ded42154fd02c462bb3e74a345581d57, type: 3}
+      propertyPath: gs
+      value: 
+      objectReference: {fileID: 777570577}
+    - target: {fileID: 4110962879232718936, guid: ded42154fd02c462bb3e74a345581d57, type: 3}
       propertyPath: TakeWeaponGunTypes
       value: 
       objectReference: {fileID: 11400000, guid: 3f751b06144ba4830ac10bbc50314c62, type: 2}
