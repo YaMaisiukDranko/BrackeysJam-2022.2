@@ -709,7 +709,7 @@ GameObject:
   - component: {fileID: 798141191}
   - component: {fileID: 798141190}
   m_Layer: 0
-  m_Name: Manager
+  m_Name: AlienSpawnerManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
