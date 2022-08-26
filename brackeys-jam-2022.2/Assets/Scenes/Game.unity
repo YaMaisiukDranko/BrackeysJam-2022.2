@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 135665569}
   m_Layer: 0
   m_Name: Laser
-  m_TagString: Untagged
+  m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -309,6 +309,9 @@ MonoBehaviour:
   layersToHit:
     serializedVersion: 2
     m_Bits: 64
+  gs: {fileID: 0}
+  gt: {fileID: 0}
+  ahlth: {fileID: 0}
 --- !u!120 &135665569
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -632,6 +635,7 @@ MonoBehaviour:
   gunTypes: {fileID: 11400000, guid: ef53a12dde7be44f8aa9de0331085829, type: 2}
   gun: {fileID: 777570577}
   sr: {fileID: 0}
+  laserScript: {fileID: 0}
 --- !u!1 &798141189
 GameObject:
   m_ObjectHideFlags: 0

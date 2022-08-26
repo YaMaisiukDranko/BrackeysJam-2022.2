@@ -11,6 +11,7 @@ public class GunScript : MonoBehaviour
     public GunTypes gunTypes;
     public GunScript gun;
     public SpriteRenderer sr;
+    public Laser laserScript;
 
     private float time;
     
@@ -36,6 +37,10 @@ public class GunScript : MonoBehaviour
         else if (gunTypes.shotgun == true && gunTypes.rapidFire == false)
         {
             Shotgun();
+        }
+        else if(gunTypes.raygun == true)
+        {
+            gunTypes.laser = GameObject.FindWithTag("Laser");
         }
         sr.sprite = gunTypes.GunSprite;
     }
@@ -85,9 +90,20 @@ public class GunScript : MonoBehaviour
         }
     }
 
-    void LaserGun()
+    public void RayGun()
     {
-        
+        if (Input.GetButton("Fire1"))
+        {
+            gunTypes.laser.SetActive(true);
+            time += Time.deltaTime;
+            float nextTimeToFire = 1 / gunTypes.fireRate;
+
+            if (time >= nextTimeToFire)
+            {
+                
+                time = 0;
+            }
+        }
     }
     
 }

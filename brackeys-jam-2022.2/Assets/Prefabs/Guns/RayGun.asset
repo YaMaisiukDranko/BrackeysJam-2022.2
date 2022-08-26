@@ -15,10 +15,11 @@ MonoBehaviour:
   name: 
   GunSprite: {fileID: 21300000, guid: e5b13262302224cb4b623e2a730b7e04, type: 3}
   damage: 5
-  fireForce: 0
-  rapidFire: 0
-  fireRate: 0
+  fireForce: 15
+  rapidFire: 1
+  fireRate: 10
   shotgun: 0
   amountOfBullets: 0
   spread: 0
   raygun: 1
+  laser: {fileID: 0}

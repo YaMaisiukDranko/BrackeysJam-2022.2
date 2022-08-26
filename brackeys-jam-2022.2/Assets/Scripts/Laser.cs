@@ -5,10 +5,15 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
+    /*
     public LayerMask layersToHit;
+    public GunScript gs;
+    public GunTypes gt;
+    public AlienHealth ahlth;
 
     private void Update()
     {
+        gs = GameObject.FindWithTag("Gun").GetComponent<GunScript>();
         float angle = transform.eulerAngles.z * Mathf.Deg2Rad;
         Vector2 dir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
 
@@ -23,7 +28,9 @@ public class Laser : MonoBehaviour
         Debug.Log(hit.collider.gameObject.name);
         if (hit.collider.tag == "Alien")
         {
-            Destroy(hit.collider.gameObject);
+            ahlth = hit.collider.gameObject.GetComponent<AlienHealth>();
+            ahlth.TakeDamage(gt.damage);
+            gs.LaserGun();
         }
-    }
+    }*/
 }

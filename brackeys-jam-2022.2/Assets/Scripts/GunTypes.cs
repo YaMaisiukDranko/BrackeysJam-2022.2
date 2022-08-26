@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,4 +23,5 @@ public class GunTypes : ScriptableObject
 
     [Header("RayGun")] 
     public bool raygun;
+    public GameObject laser;
 }

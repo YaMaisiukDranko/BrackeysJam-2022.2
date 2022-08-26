@@ -43,10 +43,10 @@ public class AlienHealth : MonoBehaviour
         player = GameObject.FindWithTag("Player");
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         alienHealth -= damage;
-        
         healthBar.SetHealth(alienHealth);
+        healthBar.HealthBarShower();
     }
 }
