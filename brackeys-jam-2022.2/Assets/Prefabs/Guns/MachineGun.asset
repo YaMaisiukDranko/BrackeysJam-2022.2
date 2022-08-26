@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Machine Gun
   GunSprite: {fileID: 2089697645, guid: 407191f0247f248b4ae99f4effaed872, type: 3}
   damage: 5
-  fireForce: 10
+  fireForce: 15
   rapidFire: 1
   fireRate: 10
   shotgun: 0

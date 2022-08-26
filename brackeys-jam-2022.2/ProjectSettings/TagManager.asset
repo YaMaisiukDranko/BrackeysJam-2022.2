@@ -7,6 +7,7 @@ TagManager:
   - Bullet
   - Gun
   - Alien
+  - Trigger
   layers:
   - Default
   - TransparentFX

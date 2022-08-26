@@ -15,11 +15,16 @@ using UnityEngine;
             {
                 Destroy(gameObject);
             }
+
+            if (!col.gameObject.CompareTag("Trigger"))
+            {
+                Destroy(gameObject);
+            }
         }
 
         private void OnTriggerEnter2D(Collider2D col)
         {
-            if (!col.gameObject.CompareTag("Bullet"))
+            if (!col.gameObject.CompareTag("Bullet") || !col.gameObject.CompareTag("Trigger"))
             {
                 Destroy(gameObject);
             }
