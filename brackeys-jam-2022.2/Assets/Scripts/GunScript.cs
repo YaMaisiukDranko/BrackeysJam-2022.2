@@ -78,10 +78,17 @@ public class GunScript : MonoBehaviour
            
             for (int i = 0; i < gunTypes.amountOfBullets; i++)
             {
-                GameObject b = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-                
+                gunTypes.spread = Random.Range(-1, 1);
+                GameObject b = Instantiate(bulletPrefab, firePoint.position + new Vector3(gunTypes.spread,0,0),
+                    Quaternion.Euler(0, 0, gunTypes.spread));
+                b.GetComponent<Rigidbody2D>().AddForce(firePoint.up * gunTypes.fireForce,ForceMode2D.Impulse);
             }
         }
+    }
+
+    void LaserGun()
+    {
+        
     }
     
 }

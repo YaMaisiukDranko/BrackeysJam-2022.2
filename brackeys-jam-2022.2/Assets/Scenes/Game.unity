@@ -1259,7 +1259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3789792759465431265, guid: ded42154fd02c462bb3e74a345581d57, type: 3}
       propertyPath: m_Name
-      value: Gun1_1
+      value: Pistol
       objectReference: {fileID: 0}
     - target: {fileID: 4110962879232718936, guid: ded42154fd02c462bb3e74a345581d57, type: 3}
       propertyPath: gs
