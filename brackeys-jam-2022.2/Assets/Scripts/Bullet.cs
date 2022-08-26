@@ -13,7 +13,7 @@ using UnityEngine;
         {
             if (col.gameObject.tag != "Bullet")
             {
-                Destroy(gameObject, 0.1f);
+                Destroy(gameObject);
             }
 
             if (!col.gameObject.CompareTag("Trigger"))

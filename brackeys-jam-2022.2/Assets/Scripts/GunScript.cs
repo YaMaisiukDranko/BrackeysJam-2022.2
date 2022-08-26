@@ -39,6 +39,11 @@ public class GunScript : MonoBehaviour
         {
             Shotgun();
         }
+        else if(gunTypes.shotgun == false && gunTypes.raygun == true)
+        {
+            RayGun();
+        }
+        
         sr.sprite = gunTypes.GunSprite;
     }
 
@@ -68,6 +73,12 @@ public class GunScript : MonoBehaviour
         else
         {
             gunTypes.Laser.SetActive(false);
+        }
+
+        if (gunTypes.rapidFire == true)
+        {
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation, gun.transform);
+            bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * gunTypes.fireForce, ForceMode2D.Impulse);
         }
         
     }
