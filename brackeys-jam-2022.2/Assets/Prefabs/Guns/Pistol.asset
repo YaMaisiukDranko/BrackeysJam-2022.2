@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Pistol
   m_EditorClassIdentifier: 
   name: Pistol
-  GunSprite: {fileID: -1275026796, guid: 407191f0247f248b4ae99f4effaed872, type: 3}
+  GunSprite: {fileID: 21300000, guid: a968ba0701c9d4dcf8bcfff49aa1ca92, type: 3}
   damage: 10
   fireForce: 20
+  bulletPrefab: {fileID: 556123117604862933, guid: e79e34bbdd12d47269977012ff86d95d, type: 3}
   rapidFire: 0
   fireRate: 0
   shotgun: 0
   amountOfBullets: 0
   spread: 0
+  raygun: 0
+  laser: {fileID: 0}

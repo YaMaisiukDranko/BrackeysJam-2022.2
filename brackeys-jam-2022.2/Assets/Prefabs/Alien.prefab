@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7192185736973876969}
   - component: {fileID: 771533622311515196}
   - component: {fileID: 4651852175431897564}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: AttackTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63,6 +63,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alienDamage: 10
   attackSpeed: 1
+  canAttack: 0
 --- !u!1 &8829328249406320166
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +163,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

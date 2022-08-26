@@ -5,51 +5,32 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
-    [SerializeField] private float defDistanceRay = 100;
-    public Transform laserFirePoint;
-    public LineRenderer m_lineRenderer;
-    private Transform _transform;
-    private RaycastHit2D hit;
-    public LayerMask lm;
-    private void Awake()
-    {
-        _transform = GetComponent<Transform>();
-    }
+    /*
+    public LayerMask layersToHit;
+    public GunScript gs;
+    public GunTypes gt;
+    public AlienHealth ahlth;
 
     private void Update()
     {
-        ShootLaser();
-        CheckForEnemy();
-    }
+        gs = GameObject.FindWithTag("Gun").GetComponent<GunScript>();
+        float angle = transform.eulerAngles.z * Mathf.Deg2Rad;
+        Vector2 dir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
 
-    void ShootLaser()
-    {
-        if (Physics2D.Raycast(_transform.position, transform.right))
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, 50f, layersToHit);
+        if (hit.collider == null)
         {
-            hit = Physics2D.Raycast(laserFirePoint.position, transform.right, defDistanceRay, lm);
-            Draw2DRay(laserFirePoint.position, hit.point);
+            transform.localScale = new Vector3(50f, transform.localScale.y, 1);
+            return;
         }
-        else
-        {
-            Draw2DRay(laserFirePoint.position, laserFirePoint.transform.right * defDistanceRay);
-        }
-    }
 
-    void Draw2DRay(Vector2 startPos, Vector2 endPos)
-    {
-        m_lineRenderer.SetPosition(0, startPos);
-        m_lineRenderer.SetPosition(1, endPos);
-    }
-
-    void CheckForEnemy()
-    {
-        if (hit)
+        transform.localScale = new Vector3(hit.distance, transform.localScale.y, 1);
+        Debug.Log(hit.collider.gameObject.name);
+        if (hit.collider.tag == "Alien")
         {
-            Debug.Log("Touch - ALIEN");
+            ahlth = hit.collider.gameObject.GetComponent<AlienHealth>();
+            ahlth.TakeDamage(gt.damage);
+            gs.LaserGun();
         }
-        else
-        {
-            
-        }
-    }
+    }*/
 }

@@ -12,9 +12,9 @@ public class AlienHealth : MonoBehaviour
     public GunScript gunScript;
     public GunTypes gunType;
     
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.collider.CompareTag("Bullet"))
+        if (collision.CompareTag("Bullet"))
         {
             TakeDamage(gunType.damage);
             healthBar.HealthBarShower();
@@ -43,10 +43,10 @@ public class AlienHealth : MonoBehaviour
         player = GameObject.FindWithTag("Player");
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         alienHealth -= damage;
-        
         healthBar.SetHealth(alienHealth);
+        healthBar.HealthBarShower();
     }
 }

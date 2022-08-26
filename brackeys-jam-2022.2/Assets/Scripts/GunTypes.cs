@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,8 +11,9 @@ public class GunTypes : ScriptableObject
     public Sprite GunSprite;
     public int damage;
     public int fireForce;
+    public GameObject bulletPrefab;
 
-    [Header("Machine Gun")]
+    [Header("Rifle")]
     public bool rapidFire;
     public float fireRate; //Bullets per second
     
@@ -19,4 +21,8 @@ public class GunTypes : ScriptableObject
     public bool shotgun;
     public int amountOfBullets;
     public float spread;
+
+    [Header("RayGun")] 
+    public bool raygun;
+    public GameObject laser;
 }

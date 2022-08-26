@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 376cebc2abf984a1c8199e72a3d6a533, type: 3}
-  m_Name: MachineGun
+  m_Name: RayGun
   m_EditorClassIdentifier: 
-  name: Machine Gun
-  GunSprite: {fileID: 2089697645, guid: 407191f0247f248b4ae99f4effaed872, type: 3}
+  name: 
+  GunSprite: {fileID: 21300000, guid: e5b13262302224cb4b623e2a730b7e04, type: 3}
   damage: 5
-  fireForce: 10
+  fireForce: 15
   rapidFire: 1
   fireRate: 10
   shotgun: 0
   amountOfBullets: 0
   spread: 0
+  raygun: 1
+  laser: {fileID: 0}

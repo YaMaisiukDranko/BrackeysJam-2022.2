@@ -11,13 +11,12 @@ public class GunScript : MonoBehaviour
     public GunTypes gunTypes;
     public GunScript gun;
     public SpriteRenderer sr;
-
     private float time;
     
     
     private void Start()
     {
-        sr = GetComponent<SpriteRenderer>();
+        sr = GameObject.Find("GunSprite").GetComponent<SpriteRenderer>();
         gun = GetComponent<GunScript>();
         Debug.Log("Weapon: " + gunTypes.name);
         sr.sprite = gunTypes.GunSprite; // Set sprite
@@ -25,6 +24,7 @@ public class GunScript : MonoBehaviour
 
     private void Update()
     {
+        bulletPrefab = gunTypes.bulletPrefab;
         if (gunTypes.rapidFire == true && gunTypes.shotgun == false)
         {
             RapidFire();
@@ -36,6 +36,10 @@ public class GunScript : MonoBehaviour
         else if (gunTypes.shotgun == true && gunTypes.rapidFire == false)
         {
             Shotgun();
+        }
+        else if(gunTypes.raygun == true)
+        {
+            gunTypes.laser = GameObject.FindWithTag("Laser");
         }
         sr.sprite = gunTypes.GunSprite;
     }
@@ -75,11 +79,28 @@ public class GunScript : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-           
             for (int i = 0; i < gunTypes.amountOfBullets; i++)
             {
-                GameObject b = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                gunTypes.spread = Random.Range(-1, 1);
+                GameObject b = Instantiate(bulletPrefab, firePoint.position + new Vector3(gunTypes.spread,0,0),
+                    Quaternion.Euler(0, 0, gunTypes.spread));
+                b.GetComponent<Rigidbody2D>().AddForce(firePoint.up * gunTypes.fireForce,ForceMode2D.Impulse);
+            }
+        }
+    }
+
+    public void RayGun()
+    {
+        if (Input.GetButton("Fire1"))
+        {
+            gunTypes.laser.SetActive(true);
+            time += Time.deltaTime;
+            float nextTimeToFire = 1 / gunTypes.fireRate;
+
+            if (time >= nextTimeToFire)
+            {
                 
+                time = 0;
             }
         }
     }
