@@ -11,8 +11,6 @@ public class GunScript : MonoBehaviour
     public GunTypes gunTypes;
     public GunScript gun;
     public SpriteRenderer sr;
-    public Laser laserScript;
-
     private float time;
     
     
@@ -26,6 +24,7 @@ public class GunScript : MonoBehaviour
 
     private void Update()
     {
+        bulletPrefab = gunTypes.bulletPrefab;
         if (gunTypes.rapidFire == true && gunTypes.shotgun == false)
         {
             RapidFire();

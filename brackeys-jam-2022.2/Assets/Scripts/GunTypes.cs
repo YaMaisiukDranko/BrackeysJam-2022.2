@@ -11,6 +11,7 @@ public class GunTypes : ScriptableObject
     public Sprite GunSprite;
     public int damage;
     public int fireForce;
+    public GameObject bulletPrefab;
 
     [Header("Rifle")]
     public bool rapidFire;
