@@ -75,7 +75,6 @@ public class GunScript : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-           
             for (int i = 0; i < gunTypes.amountOfBullets; i++)
             {
                 gunTypes.spread = Random.Range(-1, 1);
