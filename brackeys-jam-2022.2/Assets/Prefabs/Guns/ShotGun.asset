@@ -17,7 +17,7 @@ MonoBehaviour:
   damage: 5
   fireForce: 20
   rapidFire: 0
-  fireRate: 0
+  fireRate: 5
   shotgun: 1
-  amountOfBullets: 2
-  spread: 1
+  amountOfBullets: 5
+  spread: -1
