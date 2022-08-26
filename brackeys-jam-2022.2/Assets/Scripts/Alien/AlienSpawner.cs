@@ -21,6 +21,7 @@ public class AlienSpawner : MonoBehaviour
     public int nextWave = 0;
 
     public Transform[] spawnPoints;
+    public int randomSpawnPoint;
 
     public float timeBetweenWaves;
     public float waveCountdown;
@@ -118,8 +119,9 @@ public class AlienSpawner : MonoBehaviour
 
     void SpawnEnemy(Transform enemy)
     {
+        randomSpawnPoint = Random.Range(0, spawnPoints.Length);
         Debug.Log("Spawning enemy: " + enemy.name);
-        Instantiate(enemy, transform.position, transform.rotation);
+        Instantiate(enemy, spawnPoints[randomSpawnPoint].position, transform.rotation);
     }
 }
 
