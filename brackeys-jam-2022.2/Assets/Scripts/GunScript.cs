@@ -12,6 +12,7 @@ public class GunScript : MonoBehaviour
     public GunTypes gunTypes;
     public GunScript gun;
     public SpriteRenderer sr;
+    
 
     private float time;
     
@@ -45,7 +46,13 @@ public class GunScript : MonoBehaviour
     {
         if (gunTypes.shotgun == true)
         {
-            
+            for (int i = 0; i < gunTypes.amountOfBullets; i++)
+            {
+                gunTypes.spread = Random.Range(-1, 1);
+                GameObject b = Instantiate(bulletPrefab, firePoint.position + new Vector3(gunTypes.spread,0,0),
+                    Quaternion.Euler(0, 0, gunTypes.spread));
+                b.GetComponent<Rigidbody2D>().AddForce(firePoint.up * gunTypes.fireForce,ForceMode2D.Impulse);
+            }
         }
 
         else if (gunTypes.shotgun == false)
@@ -85,8 +92,13 @@ public class GunScript : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-                
+                Fire();
         }
+    }
+
+    void RayGun()
+    {
+        
     }
     
 }
