@@ -11,9 +11,9 @@ using UnityEngine;
 
         private void OnCollisionEnter2D(Collision2D col)
         {
-            if (!col.gameObject.CompareTag("Bullet"))
+            if (col.gameObject.tag != "Bullet")
             {
-                Destroy(gameObject);
+                Destroy(gameObject, 0.1f);
             }
 
             if (!col.gameObject.CompareTag("Trigger"))
@@ -24,9 +24,9 @@ using UnityEngine;
 
         private void OnTriggerEnter2D(Collider2D col)
         {
-            if (!col.gameObject.CompareTag("Bullet") || !col.gameObject.CompareTag("Trigger"))
+            if (col.gameObject.tag != "Bullet" || !col.gameObject.CompareTag("Trigger"))
             {
-                Destroy(gameObject);
+                Destroy(gameObject, 0.1f);
             }
         }
 

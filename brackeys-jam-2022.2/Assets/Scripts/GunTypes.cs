@@ -19,4 +19,9 @@ public class GunTypes : ScriptableObject
     public bool shotgun;
     public int amountOfBullets;
     public float spread;
+
+    [Header("Ray Gun")] 
+    public bool raygun;
+
+    public GameObject Laser;
 }

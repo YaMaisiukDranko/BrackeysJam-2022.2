@@ -12,7 +12,6 @@ public class GunScript : MonoBehaviour
     public GunTypes gunTypes;
     public GunScript gun;
     public SpriteRenderer sr;
-    
 
     private float time;
     
@@ -23,6 +22,7 @@ public class GunScript : MonoBehaviour
         gun = GetComponent<GunScript>();
         Debug.Log("Weapon: " + gunTypes.name);
         sr.sprite = gunTypes.GunSprite; // Set sprite
+        gunTypes.Laser = GameObject.Find("Laser");
     }
 
     private void Update()
@@ -55,10 +55,19 @@ public class GunScript : MonoBehaviour
             }
         }
 
-        else if (gunTypes.shotgun == false)
+        else if (gunTypes.shotgun == false && gunTypes.raygun == false)
         {
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation, gun.transform);
             bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * gunTypes.fireForce, ForceMode2D.Impulse);
+        }
+
+        if(gunTypes.raygun == true)
+        {
+             gunTypes.Laser.SetActive(true);
+        }
+        else
+        {
+            gunTypes.Laser.SetActive(false);
         }
         
     }
@@ -98,7 +107,10 @@ public class GunScript : MonoBehaviour
 
     void RayGun()
     {
-        
+        if (Input.GetButton("Fire1"))
+        {
+            Fire();
+        }
     }
     
 }
