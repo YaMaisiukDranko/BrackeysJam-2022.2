@@ -12,6 +12,7 @@ using UnityEngine;
         private void OnCollisionEnter2D(Collision2D col)
         {
             Destroy(gameObject);
+            
         }
 
         private void OnTriggerEnter2D(Collider2D col)
@@ -21,6 +22,6 @@ using UnityEngine;
 
         private void Update()
         {
-            Destroy(gameObject, 5f);
+            Destroy(gameObject, 3f);
         }
     }
