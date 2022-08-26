@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rifle
   m_EditorClassIdentifier: 
   name: Rifle
-  GunSprite: {fileID: 2089697645, guid: 407191f0247f248b4ae99f4effaed872, type: 3}
+  GunSprite: {fileID: 21300000, guid: f6cab7457122d41c6bd2871301c871e2, type: 3}
   damage: 5
   fireForce: 10
   rapidFire: 1
@@ -21,3 +21,4 @@ MonoBehaviour:
   shotgun: 0
   amountOfBullets: 0
   spread: 0
+  raygun: 0
