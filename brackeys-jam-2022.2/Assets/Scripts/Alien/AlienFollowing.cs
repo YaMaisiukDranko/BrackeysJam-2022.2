@@ -26,15 +26,16 @@ public class AlienFollowing : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            target = col.transform;
+            target = null;
         }
+        
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            target = null;
+            target = other.transform;
         }
     }
 }
