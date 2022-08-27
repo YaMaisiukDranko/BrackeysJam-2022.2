@@ -44,6 +44,39 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Fade
+    uniqueID: 559270395
+    locked: 0
+  - name: UnderGround
+    uniqueID: 3392700683
+    locked: 0
+  - name: UnderGroundDetail
+    uniqueID: 2775865745
+    locked: 0
+  - name: Ground
+    uniqueID: 1350897301
+    locked: 0
+  - name: grounddetail
+    uniqueID: 3639136049
+    locked: 0
+  - name: MidGroundBelowPlayer
+    uniqueID: 2884361071
+    locked: 0
+  - name: Player
+    uniqueID: 299393087
+    locked: 0
+  - name: MidGround
+    uniqueID: 57555795
+    locked: 0
+  - name: MidGroundDetail
+    uniqueID: 3764095535
+    locked: 0
+  - name: UpperGround
+    uniqueID: 1274300011
+    locked: 0
+  - name: UppGroundDetail
+    uniqueID: 2627469395
+    locked: 0
   - name: UI
     uniqueID: 112600957
     locked: 0
