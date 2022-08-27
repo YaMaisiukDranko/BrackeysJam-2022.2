@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 28188373}
   - component: {fileID: 28188374}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LaserFirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 135665567}
   - component: {fileID: 135665568}
   - component: {fileID: 135665569}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Laser
   m_TagString: Laser
   m_Icon: {fileID: 0}
@@ -420,6 +420,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: f2fb7a81270974c99a6d49bac976839f, type: 3}
+    - target: {fileID: 3051705393124263824, guid: ded42154fd02c462bb3e74a345581d57, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3789792759465431265, guid: ded42154fd02c462bb3e74a345581d57, type: 3}
       propertyPath: m_Name
       value: Shotgun
@@ -577,6 +581,71 @@ Transform:
   m_Father: {fileID: 1317436186}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &476266286
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7008845395683146061, guid: 6386babc32f4be445bb434fb797eb6ce, type: 3}
+      propertyPath: m_Name
+      value: Grid
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008845395683146063, guid: 6386babc32f4be445bb434fb797eb6ce, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008845395683146063, guid: 6386babc32f4be445bb434fb797eb6ce, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008845395683146063, guid: 6386babc32f4be445bb434fb797eb6ce, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008845395683146063, guid: 6386babc32f4be445bb434fb797eb6ce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008845395683146063, guid: 6386babc32f4be445bb434fb797eb6ce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008845395683146063, guid: 6386babc32f4be445bb434fb797eb6ce, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008845395683146063, guid: 6386babc32f4be445bb434fb797eb6ce, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008845395683146063, guid: 6386babc32f4be445bb434fb797eb6ce, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008845395683146063, guid: 6386babc32f4be445bb434fb797eb6ce, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008845395683146063, guid: 6386babc32f4be445bb434fb797eb6ce, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008845395683146063, guid: 6386babc32f4be445bb434fb797eb6ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008845395683146063, guid: 6386babc32f4be445bb434fb797eb6ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008845395683146063, guid: 6386babc32f4be445bb434fb797eb6ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6386babc32f4be445bb434fb797eb6ce, type: 3}
 --- !u!1 &777570574
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,7 +656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 777570576}
   - component: {fileID: 777570577}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gun
   m_TagString: Gun
   m_Icon: {fileID: 0}
@@ -772,6 +841,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: e5b13262302224cb4b623e2a730b7e04, type: 3}
+    - target: {fileID: 3051705393124263824, guid: ded42154fd02c462bb3e74a345581d57, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3789792759465431265, guid: ded42154fd02c462bb3e74a345581d57, type: 3}
       propertyPath: m_Name
       value: RayGun
@@ -1022,7 +1095,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1306862041}
   - component: {fileID: 1306862042}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GunSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1084,7 +1157,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1232,7 +1305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1380240015}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1269,6 +1342,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: f6cab7457122d41c6bd2871301c871e2, type: 3}
+    - target: {fileID: 3051705393124263824, guid: ded42154fd02c462bb3e74a345581d57, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3789792759465431265, guid: ded42154fd02c462bb3e74a345581d57, type: 3}
       propertyPath: m_Name
       value: Rifle
@@ -1505,7 +1582,7 @@ GameObject:
   - component: {fileID: 7613314539612146934}
   - component: {fileID: 4009035555825297024}
   - component: {fileID: 7748745112459565422}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1552,7 +1629,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1693,9 +1770,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2573507087784574673, guid: 29e15175425e64e50b83f9cf4198ad7b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3530099394624931659, guid: 29e15175425e64e50b83f9cf4198ad7b, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3530099394624931659, guid: 29e15175425e64e50b83f9cf4198ad7b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4377664407626801545, guid: 29e15175425e64e50b83f9cf4198ad7b, type: 3}
       propertyPath: m_Enabled
@@ -1709,6 +1794,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4377664407626801547, guid: 29e15175425e64e50b83f9cf4198ad7b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4572591136401308504, guid: 29e15175425e64e50b83f9cf4198ad7b, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1717,6 +1806,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1204268367}
+    - target: {fileID: 5965464522011850797, guid: 29e15175425e64e50b83f9cf4198ad7b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8673296100330755320, guid: 29e15175425e64e50b83f9cf4198ad7b, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1739,9 +1832,17 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: a968ba0701c9d4dcf8bcfff49aa1ca92, type: 3}
+    - target: {fileID: 3051705393124263824, guid: ded42154fd02c462bb3e74a345581d57, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3789792759465431265, guid: ded42154fd02c462bb3e74a345581d57, type: 3}
       propertyPath: m_Name
       value: Pistol
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789792759465431265, guid: ded42154fd02c462bb3e74a345581d57, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4110962879232718936, guid: ded42154fd02c462bb3e74a345581d57, type: 3}
       propertyPath: gs
