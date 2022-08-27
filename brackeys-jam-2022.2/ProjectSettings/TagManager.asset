@@ -8,6 +8,8 @@ TagManager:
   - Gun
   - Alien
   - Laser
+  - MuzzleFlash
+  - GunSprite
   layers:
   - Default
   - TransparentFX
@@ -16,7 +18,7 @@ TagManager:
   - Water
   - UI
   - Enemy
-  - 
+  - Player
   - 
   - 
   - 
@@ -44,6 +46,39 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UnderGround
+    uniqueID: 372539345
+    locked: 0
+  - name: UnderGroundDetail
+    uniqueID: 2427558313
+    locked: 0
+  - name: GroundDetailWierd
+    uniqueID: 2898642043
+    locked: 0
+  - name: Ground
+    uniqueID: 2746749625
+    locked: 0
+  - name: GroundDetail
+    uniqueID: 45852775
+    locked: 0
+  - name: BelowMid
+    uniqueID: 2326738789
+    locked: 0
+  - name: Player
+    uniqueID: 3398334959
+    locked: 0
+  - name: Mid
+    uniqueID: 1598762775
+    locked: 0
+  - name: MidDetail
+    uniqueID: 2042676649
+    locked: 0
+  - name: Top
+    uniqueID: 1109923885
+    locked: 0
+  - name: TopDetail
+    uniqueID: 3265235523
     locked: 0
   - name: UI
     uniqueID: 112600957

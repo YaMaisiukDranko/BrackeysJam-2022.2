@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,6 +100,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -107,10 +119,10 @@ TextureImporter:
       name: Walk-FrontBack-Legs_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
+        x: 4
+        y: 5
+        width: 8
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,8 +130,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52ae08fd753e04f4ebb9786e856b255c
-      internalID: -1830353320
+      spriteID: 2e3da8a5792644f9ba122031a4f3211d
+      internalID: -836539152
       vertices: []
       indices: 
       edges: []
@@ -128,10 +140,10 @@ TextureImporter:
       name: Walk-FrontBack-Legs_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
+        x: 20
+        y: 6
+        width: 8
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,8 +151,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 023c3cf7fbb0c0a4b82c874352ba90b6
-      internalID: -234313827
+      spriteID: 756e74b8368a546edb6212d29d2fc4a9
+      internalID: 22726920
       vertices: []
       indices: 
       edges: []
@@ -149,10 +161,10 @@ TextureImporter:
       name: Walk-FrontBack-Legs_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
+        x: 36
+        y: 5
+        width: 8
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,8 +172,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61ed8eb4058d79042bf6874c70bc3ad1
-      internalID: -1275293837
+      spriteID: e9e650ff9e51f494f83e81883a70e9f4
+      internalID: 550479007
       vertices: []
       indices: 
       edges: []
@@ -170,10 +182,10 @@ TextureImporter:
       name: Walk-FrontBack-Legs_3
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
+        x: 52
+        y: 6
+        width: 8
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,8 +193,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efd57dd627746424fa5461e981fe734a
-      internalID: 582166199
+      spriteID: b35561a3c46a54cb1a7501f4811ff798
+      internalID: -1461151450
       vertices: []
       indices: 
       edges: []
@@ -198,10 +210,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Walk-FrontBack-Legs_3: 582166199
-      Walk-FrontBack-Legs_0: -1830353320
-      Walk-FrontBack-Legs_1: -234313827
-      Walk-FrontBack-Legs_2: -1275293837
+      Walk-FrontBack-Legs_3: -1461151450
+      Walk-FrontBack-Legs_0: -836539152
+      Walk-FrontBack-Legs_1: 22726920
+      Walk-FrontBack-Legs_2: 550479007
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

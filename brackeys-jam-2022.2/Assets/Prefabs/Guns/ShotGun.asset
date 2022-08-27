@@ -17,10 +17,12 @@ MonoBehaviour:
   damage: 5
   fireForce: 20
   bulletPrefab: {fileID: 556123117604862933, guid: ee5cf65fc35504efdb3024335866bbbd, type: 3}
+  muzzleFlash: {fileID: 0}
+  muzzleFlashSprite: {fileID: 21300000, guid: a2f11c71ab5624eda8a754484816427d, type: 3}
   rapidFire: 0
   fireRate: 0
   shotgun: 1
   amountOfBullets: 15
-  spread: 0
+  spread: -1
   raygun: 0
   laser: {fileID: 0}

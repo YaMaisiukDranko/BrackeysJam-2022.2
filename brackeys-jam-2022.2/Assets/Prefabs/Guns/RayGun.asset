@@ -15,8 +15,10 @@ MonoBehaviour:
   name: 
   GunSprite: {fileID: 21300000, guid: e5b13262302224cb4b623e2a730b7e04, type: 3}
   damage: 5
-  fireForce: 15
+  fireForce: 5
   bulletPrefab: {fileID: 556123117604862933, guid: 6dc7367c1def64d649ae5fc7fe345d99, type: 3}
+  muzzleFlash: {fileID: 0}
+  muzzleFlashSprite: {fileID: 21300000, guid: a2f11c71ab5624eda8a754484816427d, type: 3}
   rapidFire: 1
   fireRate: 10
   shotgun: 0
