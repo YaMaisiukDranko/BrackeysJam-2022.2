@@ -12,10 +12,12 @@ public class GunScript : MonoBehaviour
     public GunScript gun;
     public SpriteRenderer sr;
     private float time;
-    
-    
+    public GameObject muzzleFlash;
+
+
     private void Start()
     {
+        gunTypes.muzzleFlash.enabled = false;
         sr = GameObject.Find("GunSprite").GetComponent<SpriteRenderer>();
         gun = GetComponent<GunScript>();
         Debug.Log("Weapon: " + gunTypes.name);
@@ -39,13 +41,15 @@ public class GunScript : MonoBehaviour
         }
         else if(gunTypes.raygun == true)
         {
-            gunTypes.laser = GameObject.FindWithTag("Laser");
+            
         }
         sr.sprite = gunTypes.GunSprite;
+        gunTypes.muzzleFlash.sprite = gunTypes.muzzleFlashSprite;
     }
 
     void Fire()
     {
+        muzzleFlash.SetActive(true);
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation, gun.transform);
         bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * gunTypes.fireForce, ForceMode2D.Impulse);
     }
@@ -99,7 +103,6 @@ public class GunScript : MonoBehaviour
 
             if (time >= nextTimeToFire)
             {
-                
                 time = 0;
             }
         }
