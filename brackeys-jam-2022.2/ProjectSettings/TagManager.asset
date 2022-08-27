@@ -45,6 +45,36 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: UnderGround
+    uniqueID: 4284206595
+    locked: 0
+  - name: GroundUnderGroundDetail
+    uniqueID: 3437821311
+    locked: 0
+  - name: Ground
+    uniqueID: 625227291
+    locked: 0
+  - name: GroundDetail
+    uniqueID: 1168795049
+    locked: 0
+  - name: BelowMid
+    uniqueID: 1070646161
+    locked: 0
+  - name: Player
+    uniqueID: 2640845697
+    locked: 0
+  - name: Mid
+    uniqueID: 403039577
+    locked: 0
+  - name: MidDetail
+    uniqueID: 2694231039
+    locked: 0
+  - name: Top
+    uniqueID: 588925129
+    locked: 0
+  - name: TopDetail
+    uniqueID: 1275406951
+    locked: 0
   - name: UI
     uniqueID: 112600957
     locked: 0
