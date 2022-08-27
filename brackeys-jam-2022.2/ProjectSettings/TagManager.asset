@@ -9,6 +9,7 @@ TagManager:
   - Alien
   - Laser
   - MuzzleFlash
+  - GunSprite
   layers:
   - Default
   - TransparentFX

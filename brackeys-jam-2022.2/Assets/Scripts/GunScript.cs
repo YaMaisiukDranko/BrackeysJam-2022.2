@@ -18,7 +18,7 @@ public class GunScript : MonoBehaviour
     private void Start()
     {
         gunTypes.muzzleFlash.enabled = false;
-        sr = GameObject.Find("GunSprite").GetComponent<SpriteRenderer>();
+        //sr = GameObject.FindWithTag("GunSprite").GetComponent<SpriteRenderer>();
         gun = GetComponent<GunScript>();
         Debug.Log("Weapon: " + gunTypes.name);
         sr.sprite = gunTypes.GunSprite; // Set sprite
