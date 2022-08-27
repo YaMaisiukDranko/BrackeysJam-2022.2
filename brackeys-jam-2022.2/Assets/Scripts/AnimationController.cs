@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class AnimationController : MonoBehaviour
 {
-    public Animator PlayerAnimator;
+    public Animator PlayerLegsAnimator;
+    public SpriteRenderer PlayerTorso;
     public PlayerMovement playerMovement;
+    public Vector2 playerMovementStates;
     
     public enum MovementStates { WalkUp, WalkDown, WalkLeft, WalkRight, Idle }
     MovementStates state;
@@ -15,32 +17,47 @@ public class AnimationController : MonoBehaviour
         state = MovementStates.Idle;
     }
 
+    private void Update()
+    {
+        UpdateAnimation();
+        playerMovementStates = playerMovement.movement;
+    }
+
     public void UpdateAnimation()
     {
         // up/down
         if (playerMovement.movement.y > 0) //up
         {
-            PlayerAnimator.SetTrigger("WalkUp");
+            PlayerLegsAnimator.SetTrigger("WalkUp");
         }
         else if (playerMovement.movement.y < 0) //down
         {
-            PlayerAnimator.SetTrigger("WalkDown");
+            PlayerLegsAnimator.SetTrigger("WalkDown");
         }
         
         // right/left
         if (playerMovement.movement.x > 0) //right
         {
-            PlayerAnimator.SetTrigger("WalkRight");
+            PlayerLegsAnimator.SetTrigger("WalkRight");
         }
         else if(playerMovement.movement.x < 0) //left
         {
-            PlayerAnimator.SetTrigger("WalkLeft");
+            PlayerLegsAnimator.SetTrigger("WalkLeft");
         }
         
         //idle
         if (playerMovement.movement.x == 0 && playerMovement.movement.y == 0)
         {
-            PlayerAnimator.SetTrigger("Idle");
+            PlayerLegsAnimator.ResetTrigger("WalkUp");
+            PlayerLegsAnimator.ResetTrigger("WalkDown");
+            PlayerLegsAnimator.ResetTrigger("WalkRight");
+            PlayerLegsAnimator.ResetTrigger("WalkLeft");
+            PlayerLegsAnimator.SetTrigger("Idle");
+        }
+
+        if (playerMovement.movement.x != 0 && playerMovement.movement.y != 0)
+        {
+            PlayerLegsAnimator.ResetTrigger("Idle");
         }
     }
 }

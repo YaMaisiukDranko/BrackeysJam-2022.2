@@ -13,7 +13,7 @@ public class GunTypes : ScriptableObject
     public int fireForce;
     
     public GameObject bulletPrefab;
-    public SpriteRenderer muzzleFlash;
+    //public SpriteRenderer muzzleFlash;
     public Sprite muzzleFlashSprite;
 
 
