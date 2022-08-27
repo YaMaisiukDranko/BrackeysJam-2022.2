@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
-    private Vector2 movement;
+    public Vector2 movement;
     public Vector2 mousePos;
     public Camera cam;
 
