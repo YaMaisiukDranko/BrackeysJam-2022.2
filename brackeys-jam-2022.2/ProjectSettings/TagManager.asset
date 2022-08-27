@@ -68,6 +68,12 @@ TagManager:
   - name: Player
     uniqueID: 3398334959
     locked: 0
+  - name: Weapon
+    uniqueID: 1259192941
+    locked: 0
+  - name: Alien
+    uniqueID: 903006481
+    locked: 0
   - name: Mid
     uniqueID: 1598762775
     locked: 0
