@@ -10,6 +10,7 @@ TagManager:
   - Laser
   - MuzzleFlash
   - GunSprite
+  - PlayerCollider
   layers:
   - Default
   - TransparentFX
