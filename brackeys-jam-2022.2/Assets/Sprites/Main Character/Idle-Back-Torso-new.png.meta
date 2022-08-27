@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cc1c58d2d993f4e4192cfe693c1f2799
+guid: 36aca69d50d96420f90a63e243e89aa6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,64 +116,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Holding Gun_0
+      name: Idle-Back-Torso-new_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 15
+        x: 2
+        y: 12
+        width: 12
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93d32ce86dc1f40efae343265a7bd810
-      internalID: -629751427
+      spriteID: 0c210d3187d7e4f4b802fccf02893aa7
+      internalID: 102606359
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Holding Gun_1
+      name: Idle-Back-Torso-new_1-left
       rect:
         serializedVersion: 2
-        x: 18
+        x: 2
         y: 0
-        width: 12
-        height: 19
+        width: 2
+        height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4da1d08a0559435e99b72c5bc8c07b4
-      internalID: 890066190
+      spriteID: 7f84869c202104f4f9577b4573d1b7c8
+      internalID: 760213077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Holding Gun_2
+      name: Idle-Back-Torso-new_2-right
       rect:
         serializedVersion: 2
-        x: 34
+        x: 13
         y: 0
-        width: 12
-        height: 19
+        width: 2
+        height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb5bf429b128a41f69c05cdb6550620e
-      internalID: -1629365940
+      spriteID: 3b9464b27193f41d1b783547d44dd279
+      internalID: -88225360
       vertices: []
       indices: 
       edges: []
@@ -189,9 +189,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Holding Gun_2: -1629365940
-      Holding Gun_0: -629751427
-      Holding Gun_1: 890066190
+      Idle-Back-Torso-new_1-left: 760213077
+      Idle-Back-Torso-new_0: 102606359
+      Idle-Back-Torso-new_2-right: -88225360
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
