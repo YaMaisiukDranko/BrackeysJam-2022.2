@@ -9,7 +9,7 @@ public class CameraFollow : MonoBehaviour
     // Start is called before the first frame update
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         CameraTrans.position = new Vector3(PlayerTrans.position.x,PlayerTrans.position.y,CameraTrans.position.z);
     }
