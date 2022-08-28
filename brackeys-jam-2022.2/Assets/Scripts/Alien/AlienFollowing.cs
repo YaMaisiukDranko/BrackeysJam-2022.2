@@ -10,7 +10,9 @@ public class AlienFollowing : MonoBehaviour
     public Transform target;
 
     public Animator anim;
-    public bool attacking; 
+    public bool attacking;
+    private AudioSource audioSource;
+    private int randTimeSound;
 
     public float prevX;
 
@@ -49,6 +51,12 @@ public class AlienFollowing : MonoBehaviour
         
     }
 
+    IEnumerator audio()
+    {
+        yield return new WaitForSeconds(randTimeSound);
+        audioSource.Play();
+        yield return new WaitForSeconds(randTimeSound);
+    }
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
