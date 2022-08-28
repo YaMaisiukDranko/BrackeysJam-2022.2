@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e5dadd4a62d493eb92b9b5007cad6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 4
   target: {fileID: 0}
   anim: {fileID: 5856935376651519658}
   attacking: 0

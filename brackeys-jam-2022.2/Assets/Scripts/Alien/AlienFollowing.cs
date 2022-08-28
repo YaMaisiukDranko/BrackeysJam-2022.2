@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class AlienFollowing : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class AlienFollowing : MonoBehaviour
     {
         attacking = false;
         target = GameObject.FindWithTag("Player").transform;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -32,6 +34,9 @@ public class AlienFollowing : MonoBehaviour
             float step = speed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, target.position, step);
         }
+
+        randTimeSound = Random.Range(2, 5);
+        StartCoroutine(audio());
     }
 
     private void OnTriggerEnter2D(Collider2D col)

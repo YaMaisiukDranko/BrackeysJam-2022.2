@@ -10,9 +10,11 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 movement;
     public Vector2 mousePos;
     public Camera cam;
+    public AudioSource _audioSource;
 
     private void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
         Cursor.visible = false;
     }
@@ -22,14 +24,11 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition); 
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
 
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.deltaTime);
-        
-        
-       
     }
 }
