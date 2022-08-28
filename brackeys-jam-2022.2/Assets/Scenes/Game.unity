@@ -1192,7 +1192,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 777570574}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1.215, y: -0.141, z: 0}
+  m_LocalPosition: {x: 0.5, y: 0.10000006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1201,7 +1201,7 @@ Transform:
   - {fileID: 1306862041}
   - {fileID: 1997353969}
   m_Father: {fileID: 2090635394}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &777570577
 MonoBehaviour:
@@ -1283,7 +1283,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &798141190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1539,15 +1539,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 918617208}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1427276540}
   - {fileID: 1035327994}
   m_Father: {fileID: 2090635394}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &918617211
 MonoBehaviour:
@@ -1562,9 +1562,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerLegsAnimator: {fileID: 1427276542}
-  PlayerTorso: {fileID: 1035327995}
+  PlayerTorsoAnimator: {fileID: 1035327996}
   playerMovement: {fileID: 4009035555825297024}
-  playerMovementStates: {x: 0, y: 0}
+  legs: {fileID: 1427276539}
+  torso: {fileID: 1035327993}
+  lastDirectionVertical: 0
+  facing: 
 --- !u!114 &918617212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1651,7 +1654,7 @@ SpriteRenderer:
   m_SortingLayerID: -896632337
   m_SortingLayer: 7
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2123691267, guid: e8633390faff542a896a7c6395e97916, type: 3}
+  m_Sprite: {fileID: 285773702, guid: e8633390faff542a896a7c6395e97916, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1670,7 +1673,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1035327993}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b760c34ce56544b27b7e0bf984c8e26d, type: 2}
   m_CullingMode: 0
@@ -2132,8 +2135,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1259192941
   m_SortingLayer: 8
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 0}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: f6cab7457122d41c6bd2871301c871e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2141,7 +2144,7 @@ SpriteRenderer:
   m_Size: {x: 0.8, y: 0.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1317436185
@@ -2377,7 +2380,7 @@ SpriteRenderer:
   m_SortingLayerID: -896632337
   m_SortingLayer: 7
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: eb5cfa3095c5faa41829c510256d451f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f9fdd50c51d9ae245ae188eacb1bad13, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2438,15 +2441,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 552003536934899140, guid: 715fbf4082814d44caade81799732f62, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.72
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 552003536934899140, guid: 715fbf4082814d44caade81799732f62, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 552003536934899140, guid: 715fbf4082814d44caade81799732f62, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 128.86
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 552003536934899140, guid: 715fbf4082814d44caade81799732f62, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2989,8 +2992,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4080884300406619706}
-  - {fileID: 777570576}
   - {fileID: 918617209}
+  - {fileID: 777570576}
   - {fileID: 1494326719}
   - {fileID: 1530647612}
   m_Father: {fileID: 0}
