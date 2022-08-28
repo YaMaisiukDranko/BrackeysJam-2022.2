@@ -100,18 +100,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -119,19 +107,19 @@ TextureImporter:
       name: Holding Gun_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 15
+        width: 16
         height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.42105263}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93d32ce86dc1f40efae343265a7bd810
-      internalID: -629751427
+      spriteID: 2519f0a9af2301441920d4222122e52f
+      internalID: 926036383
       vertices: []
       indices: 
       edges: []
@@ -140,19 +128,19 @@ TextureImporter:
       name: Holding Gun_1
       rect:
         serializedVersion: 2
-        x: 18
+        x: 16
         y: 0
-        width: 12
+        width: 16
         height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.42105263}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4da1d08a0559435e99b72c5bc8c07b4
-      internalID: 890066190
+      spriteID: 58b315c7e9e945943a87e7db57b227be
+      internalID: 259612357
       vertices: []
       indices: 
       edges: []
@@ -161,19 +149,19 @@ TextureImporter:
       name: Holding Gun_2
       rect:
         serializedVersion: 2
-        x: 34
+        x: 32
         y: 0
-        width: 12
+        width: 16
         height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.42105263}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb5bf429b128a41f69c05cdb6550620e
-      internalID: -1629365940
+      spriteID: f54a836e9df361b4294baa9a65884e99
+      internalID: 1903925510
       vertices: []
       indices: 
       edges: []
@@ -189,9 +177,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Holding Gun_2: -1629365940
-      Holding Gun_0: -629751427
-      Holding Gun_1: 890066190
+      Holding Gun_2: 1903925510
+      Holding Gun_0: 926036383
+      Holding Gun_1: 259612357
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

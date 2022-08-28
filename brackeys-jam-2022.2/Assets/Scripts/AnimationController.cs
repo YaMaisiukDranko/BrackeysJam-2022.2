@@ -63,11 +63,11 @@ public class AnimationController : MonoBehaviour {
         float x = (playerMovement.mousePos.x - transform.position.x) - 0;
 
         double facingAngle = (double)Mathf.Atan2(y, x) * (double)(180 / 3.14);
-        if(facingAngle > -30 && 30 > facingAngle) {
+        if(facingAngle >= -30 && 30 >= facingAngle) {
             facing = "right";
-        } else if(facingAngle > 30 && facingAngle < 150) {
+        } else if(facingAngle > 30 && facingAngle <= 150) {
             facing = "up";
-        } else if(facingAngle > 150 && facingAngle < 180 || facingAngle < -150 && facingAngle > -180) {
+        } else if(facingAngle > 150 && facingAngle <= 180 || facingAngle <= -150 && facingAngle >= -180) {
             facing = "left";
         } else {
             facing = "down";
