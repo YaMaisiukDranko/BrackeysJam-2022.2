@@ -3,61 +3,74 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimationController : MonoBehaviour
-{
+public class AnimationController : MonoBehaviour {
     public Animator PlayerLegsAnimator;
-    public SpriteRenderer PlayerTorso;
+    public Animator PlayerTorsoAnimator;
     public PlayerMovement playerMovement;
-    public Vector2 playerMovementStates;
     
-    public enum MovementStates { WalkUp, WalkDown, WalkLeft, WalkRight, Idle }
-    MovementStates state;
-    private void Start()
-    {
-        state = MovementStates.Idle;
+    public GameObject legs;
+    public GameObject torso;
+
+    public bool lastDirectionVertical;
+    public string facing;
+
+    private void Update() {
+        UpdateLegsAnimation();
+        GetFacing();
+        UpdateTorsoAnimation();
     }
 
-    private void Update()
-    {
-        UpdateAnimation();
-        playerMovementStates = playerMovement.movement;
-    }
-
-    public void UpdateAnimation()
-    {
+    public void UpdateLegsAnimation() {
         // up/down
-        if (playerMovement.movement.y > 0) //up
-        {
-            PlayerLegsAnimator.SetTrigger("WalkUp");
-        }
-        else if (playerMovement.movement.y < 0) //down
-        {
-            PlayerLegsAnimator.SetTrigger("WalkDown");
-        }
-        
-        // right/left
-        if (playerMovement.movement.x > 0) //right
-        {
-            PlayerLegsAnimator.SetTrigger("WalkRight");
-        }
-        else if(playerMovement.movement.x < 0) //left
-        {
-            PlayerLegsAnimator.SetTrigger("WalkLeft");
+        if (playerMovement.movement.y != 0) {
+            PlayerLegsAnimator.Play("Walk-Front-Back");
+            lastDirectionVertical = true;
+        } else if (playerMovement.movement.x > 0) { //right
+            legs.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            PlayerLegsAnimator.Play("Walk-Side");
+            lastDirectionVertical = false;
+        } else if(playerMovement.movement.x < 0) { //left
+            legs.transform.localRotation = Quaternion.Euler(0, 180, 0);
+            PlayerLegsAnimator.Play("Walk-Side");
+            lastDirectionVertical = false;
         }
         
         //idle
-        if (playerMovement.movement.x == 0 && playerMovement.movement.y == 0)
-        {
-            PlayerLegsAnimator.ResetTrigger("WalkUp");
-            PlayerLegsAnimator.ResetTrigger("WalkDown");
-            PlayerLegsAnimator.ResetTrigger("WalkRight");
-            PlayerLegsAnimator.ResetTrigger("WalkLeft");
-            PlayerLegsAnimator.SetTrigger("Idle");
+        if (playerMovement.movement.x == 0 && playerMovement.movement.y == 0) {
+            if(lastDirectionVertical)
+                PlayerLegsAnimator.Play("Idle-Front-Back");
+            else 
+                PlayerLegsAnimator.Play("Idle-Side");
         }
+    }
 
-        if (playerMovement.movement.x != 0 && playerMovement.movement.y != 0)
-        {
-            PlayerLegsAnimator.ResetTrigger("Idle");
+    public void UpdateTorsoAnimation() {
+        if(facing == "right") {
+            torso.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            PlayerTorsoAnimator.Play("Side");
+        } else if(facing == "left") {
+            torso.transform.localRotation = Quaternion.Euler(0, 180, 0);
+            PlayerTorsoAnimator.Play("Side");
+        } else if(facing == "up") {
+            PlayerTorsoAnimator.Play("Up");
+        } else if(facing == "down") {
+            PlayerTorsoAnimator.Play("Down");
+        }
+    }
+
+    public void GetFacing() {
+        float y = (playerMovement.mousePos.y - transform.position.y) - 0;
+        float x = (playerMovement.mousePos.x - transform.position.x) - 0;
+
+        double facingAngle = (double)Mathf.Atan2(y, x) * (double)(180 / 3.14);
+        if(facingAngle > -30 && 30 > facingAngle) {
+            facing = "right";
+        } else if(facingAngle > 30 && facingAngle < 150) {
+            facing = "up";
+        } else if(facingAngle > 150 && facingAngle < 180 || facingAngle < -150 && facingAngle > -180) {
+            facing = "left";
+        } else {
+            facing = "down";
         }
     }
 }
