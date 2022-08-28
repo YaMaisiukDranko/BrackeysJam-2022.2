@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class AlienFollowing : MonoBehaviour
 {
-    public float speed = 3f;
+    public float Alien_speed = 6f;
     public Transform target;
 
     private void Start()
@@ -17,7 +17,7 @@ public class AlienFollowing : MonoBehaviour
     {
         if (target != null)
         {
-            float step = speed * Time.deltaTime;
+            float step = Alien_speed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, target.position, step);
         }
     }
@@ -28,6 +28,10 @@ public class AlienFollowing : MonoBehaviour
         {
             target = null;
         }
+        if (col.gameObject.CompareTag("Light"))
+        {
+            Alien_speed = 3f;
+        }
         
     }
 
@@ -37,5 +41,10 @@ public class AlienFollowing : MonoBehaviour
         {
             target = other.transform;
         }
+        if (other.gameObject.CompareTag("Light"))
+        {
+            Alien_speed = 6f;
+        }
     }
+
 }

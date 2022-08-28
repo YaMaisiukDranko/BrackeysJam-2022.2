@@ -11,6 +11,7 @@ public class AlienHealth : MonoBehaviour
     public int maxHealth;
     public GunScript gunScript;
     public GunTypes gunType;
+    public GameObject CameraCode;
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -25,7 +26,7 @@ public class AlienHealth : MonoBehaviour
 
     private void Update()
     {
-        gunScript = GameObject.FindWithTag("Gun").GetComponent<GunScript>();
+        gunScript = CameraCode.GetComponent<GunScript>();
         gunType = gunScript.gunTypes;
         if (alienHealth <= 0)
         {

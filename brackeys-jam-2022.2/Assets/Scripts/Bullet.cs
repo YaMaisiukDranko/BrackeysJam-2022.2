@@ -4,9 +4,8 @@ using UnityEngine;
     public class Bullet : MonoBehaviour
     {
 
-        private void Start()
+        private void Awake()
         {
-            
         }
 
         private void OnCollisionEnter2D(Collision2D col)
@@ -22,6 +21,6 @@ using UnityEngine;
 
         private void Update()
         {
-            Destroy(gameObject, 3f);
+            Destroy(gameObject, 5f);
         }
     }

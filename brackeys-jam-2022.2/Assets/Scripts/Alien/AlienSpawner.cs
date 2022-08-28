@@ -98,7 +98,7 @@ public class AlienSpawner : MonoBehaviour
             }
         }
 
-        return true;
+        return false;
     }
 
     IEnumerator SpawnWave(Wave _wave)

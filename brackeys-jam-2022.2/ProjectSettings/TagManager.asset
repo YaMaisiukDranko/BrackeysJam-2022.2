@@ -11,6 +11,7 @@ TagManager:
   - MuzzleFlash
   - GunSprite
   - PlayerCollider
+  - Light
   layers:
   - Default
   - TransparentFX
