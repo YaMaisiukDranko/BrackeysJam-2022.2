@@ -11,6 +11,7 @@ public class GunTypes : ScriptableObject
     public Sprite GunSprite;
     public int damage;
     public int fireForce;
+    public AudioClip shootAudio;
     
     public GameObject bulletPrefab;
     //public SpriteRenderer muzzleFlash;

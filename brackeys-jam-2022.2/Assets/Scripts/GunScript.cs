@@ -13,10 +13,12 @@ public class GunScript : MonoBehaviour
     public SpriteRenderer sr;
     private float time;
     public GameObject muzzleFlash;
+    public AudioSource audioSource;
 
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         //sr = GameObject.FindWithTag("GunSprite").GetComponent<SpriteRenderer>();
         gun = GetComponent<GunScript>();
         Debug.Log("Weapon: " + gunTypes.name);
@@ -25,6 +27,7 @@ public class GunScript : MonoBehaviour
 
     private void Update()
     {
+        audioSource.clip = gunTypes.shootAudio;
         bulletPrefab = gunTypes.bulletPrefab;
         if (gunTypes.rapidFire == true && gunTypes.shotgun == false)
         {
@@ -40,7 +43,7 @@ public class GunScript : MonoBehaviour
         }
         else if(gunTypes.raygun == true)
         {
-            
+            RayGun();
         }
         sr.sprite = gunTypes.GunSprite;
     }
@@ -48,6 +51,7 @@ public class GunScript : MonoBehaviour
     void Fire()
     {
         muzzleFlash.SetActive(true);
+        audioSource.Play();
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation, gun.transform);
         bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * gunTypes.fireForce, ForceMode2D.Impulse);
     }
@@ -81,12 +85,14 @@ public class GunScript : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
+            audioSource.Play();
             for (int i = 0; i < gunTypes.amountOfBullets; i++)
             {
                 gunTypes.spread = Random.Range(-1, 1);
                 GameObject b = Instantiate(bulletPrefab, firePoint.position + new Vector3(gunTypes.spread,0,0),
                     Quaternion.Euler(0, 0, gunTypes.spread));
                 b.GetComponent<Rigidbody2D>().AddForce(firePoint.up * gunTypes.fireForce,ForceMode2D.Impulse);
+                
             }
         }
     }
@@ -95,10 +101,10 @@ public class GunScript : MonoBehaviour
     {
         if (Input.GetButton("Fire1"))
         {
-            gunTypes.laser.SetActive(true);
+            //gunTypes.laser.SetActive(true);
             time += Time.deltaTime;
             float nextTimeToFire = 1 / gunTypes.fireRate;
-
+            audioSource.Play();
             if (time >= nextTimeToFire)
             {
                 time = 0;
